@@ -60,7 +60,6 @@ public class EAzureBlobStorageFile extends ReactContextBaseJavaModule{
                         handler.post(new Runnable() {
 
                             public void run() {
-                                Toast.makeText(ctx, "File Uploaded Successfully...", Toast.LENGTH_SHORT).show();
                                 promise.resolve(imageName);
                             }
                         });
@@ -69,7 +68,6 @@ public class EAzureBlobStorageFile extends ReactContextBaseJavaModule{
                         final String exceptionMessage = ex.getMessage();
                         handler.post(new Runnable() {
                             public void run() {
-                                Toast.makeText(ctx, exceptionMessage, Toast.LENGTH_SHORT).show();
                                 promise.reject(E_LAYOUT_ERROR, ex);
                             }
                         });
